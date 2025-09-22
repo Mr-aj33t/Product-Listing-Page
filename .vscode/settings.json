@@ -1,0 +1,16 @@
+{
+  "css.format.enable": true,
+  "css.format.spaceAroundSelectorSeparator": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never"
+  },
+  "css.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "css": "css"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+},
+"scss.format.enable": true
+}
