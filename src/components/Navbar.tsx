@@ -3,7 +3,7 @@
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
-import iconImage from '/images/Icon.png';
+import iconImage from '../../public/images/Icon.png';
 
 interface NavbarProps {
   cartItems: number;
