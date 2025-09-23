@@ -9,6 +9,8 @@ interface SortingBarProps {
   onSortChange: (sortBy: SortBy) => void;
   viewMode: 'grid' | 'list';
   onViewModeChange: (mode: 'grid' | 'list') => void;
+  brandFilter?: string;
+  onClearBrandFilter?: () => void;
 }
 
 export default function SortingBar({ 
@@ -16,7 +18,9 @@ export default function SortingBar({
   sortBy, 
   onSortChange, 
   viewMode, 
-  onViewModeChange 
+  onViewModeChange,
+  brandFilter,
+  onClearBrandFilter 
 }: SortingBarProps) {
   const sortOptions = [
     { value: 'name-asc', label: 'Name (A-Z)' },
@@ -175,6 +179,23 @@ export default function SortingBar({
       </div>
 
       {/* View Mode Buttons */}
+      {brandFilter && onClearBrandFilter && (
+        <button
+          onClick={onClearBrandFilter}
+          className="absolute flex items-center px-4 py-2 text-sm text-blue-600 hover:text-blue-800 transition-colors"
+          style={{
+            right: '140px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            fontFamily: 'Proxima Nova',
+            fontWeight: '400',
+            fontSize: '14px'
+          }}
+        >
+          Clear Filter: {brandFilter}
+        </button>
+      )}
+      
       {/* Multiple View Button */}
       <button
         onClick={() => onViewModeChange('grid')}

@@ -3,7 +3,6 @@
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
-import iconImage from '/images/Icon.png';
 
 interface NavbarProps {
   cartItems: number;
@@ -47,7 +46,7 @@ export default function Navbar({ cartItems = 0, onMenuToggle, isMobileMenuOpen }
           }}
         >
           <Image 
-            src={iconImage} 
+            src="/images/Icon.png" 
             alt="Diamond Icon"
             width={32} 
             height={32}
